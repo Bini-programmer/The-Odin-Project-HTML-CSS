@@ -7,7 +7,7 @@
 body {
   background-color: aqua;
 }
-.general-wrapper{
+.general-wrapper {
   box-shadow: 5px 5px 5px 5px rgb(234, 228, 228);
 }
 .header {
@@ -81,42 +81,46 @@ h2 {
   border-radius: 2rem;
 }
 /* here starts the styles for the sign-up form */
- .header-wrapper{
-  background-color:rgba(0, 0, 0, 0.861);
- }
- header nav{
+.header-wrapper {
+  background-color: rgba(0, 0, 0, 0.861);
+}
+header nav {
   display: flex;
   justify-content: space-between;
- }
- .header-wrapper a{
+}
+.header-wrapper a {
   color: white;
   text-decoration: none;
- }
- .header-wrapper li{
+}
+.header-wrapper li {
   list-style: none;
- }
- #menu{
-  color: white;
-   text-align: left;
-   margin: auto;
-   margin-right: 15px;
-   font-size: 30px;
- }
- nav ul{
+}
+nav ul {
   display: flex;
- }
- nav a{
+}
+nav a {
   margin-right: 30px;
- }
- ul li{
- padding-top:20px;
- }
-  li a:hover{
+}
+ul li {
+  padding-top: 20px;
+}
+li a:hover {
   color: coral;
- }
- /* nav-list.show{
-  display: flex;
- } */
+}
+#menu:hover {
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: block;
+  color: aliceblue;
+  font-size: 45px;
+  margin-right: 10px;
+}
+.nav-list a {
+  font-size: 25px;
+}
+
 .description {
   font-family: "Roboto Slab", serif;
   font-optical-sizing: auto;
@@ -129,7 +133,7 @@ h2 {
 .form-container {
   box-sizing: border-box;
   background-color: rgb(101, 178, 254);
-  border: 2px solid rgb(87, 15, 15);
+  border: 2px solid rgb(210, 203, 179);
   border-radius: 2rem;
   border-width: 3px;
   width: 90%;
@@ -150,9 +154,9 @@ h2 {
 #phone-number {
   border-radius: 2rem;
 }
-input{
+input {
   box-sizing: border-box;
-   padding-left: 7px;
+  padding-left: 7px;
 }
 #btn {
   border-width: 2px;
@@ -181,21 +185,36 @@ label {
     margin-bottom: 5px;
   }
   .footer {
-     display: flex;
-     flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
-  footer p{
+  footer p {
     margin-top: 5px;
   }
 }
 /* media query for the mobile responsive */
-@media(max-width:600px){
-  nav li{
+
+@media (max-width: 600px) {
+  .nav-list {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 69px;
+    right: 0;
+    text-align: center;
+    width: 33%;
+    background-color: rgb(76, 106, 183);
+  }
+
+  .nav-list.show {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 10px;
   }
 }
-@media(min-width:600px){
-  #menu{
+@media (min-width: 600px) {
+  #menu {
     display: none;
   }
 }
